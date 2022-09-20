@@ -1,0 +1,124 @@
+.input-wrap {
+	input[type='text'],
+	input[type='date'],
+	input[type='datetime'],
+	input[type='datetime-local'],
+	input[type='email'],
+	input[type='month'],
+	input[type='number'],
+	input[type='password'],
+	input[type='range'],
+	input[type='search'],
+	input[type='tel'],
+	input[type='text'],
+	input[type='time'],
+	input[type='url'],
+	input[type='week'],
+	textarea {
+		width: 100%;
+		height: var(--form-height);
+		font-size: var(--form-font-size);
+		border-radius: var(--input-border-radius);
+		border: var(--input-border);
+		padding: 0 15px;
+		&::placeholder {
+			font-size: var(--form-font-size);
+			font-weight: 400;
+			color: $color-gray-200;
+		}
+		&:hover {
+			border: 1px solid $color-gray-100;
+			& + em {
+				&:before {
+					color: $color-gray-400;
+				}
+			}
+		}
+		&:focus {
+			border-color: var(--input-border-active);
+			box-shadow: 0px 10px 20px rgba($color-black, 0.05);
+			& + em {
+				&:before {
+					color: $color-gray-400;
+				}
+			}
+		}
+		&:disabled {
+			background-color: $color-gray-25;
+			border: var(--input-border);
+			&::placeholder {
+				color: $color-gray-100;
+			}
+			& + em {
+				&:before {
+					color: $color-gray-100;
+				}
+			}
+		}
+		&.underline {
+			border: unset;
+			padding: 0;
+			border-radius: 0;
+			border-bottom: var(--input-bottom-border);
+			box-shadow: none;
+			&:focus {
+				border-bottom-color: var(--input-border-active);
+			}
+			&:disabled {
+				background-color: transparent;
+				border-color: $color-gray-25;
+				&::placeholder {
+					color: $color-gray-50;
+				}
+				& + em {
+					&:before {
+						color: $color-gray-50;
+					}
+				}
+			}
+		}
+		& + em {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			&:before {
+				color: $color-gray-200;
+			}
+		}
+	}
+	textarea {
+		height: 150px;
+		padding: 15px;
+	}
+	label {
+		margin: 0 0 8px 0;
+	}
+	&.icon-right {
+		input {
+			padding: 0 40px 0 15px;
+			& + em {
+				right: 15px;
+			}
+			&.underline {
+				padding-right: 25px;
+				& + em {
+					right: 0;
+				}
+			}
+		}
+	}
+	&.icon-left {
+		input {
+			padding: 0 15px 0 40px;
+			& + em {
+				left: 15px;
+			}
+			&.underline {
+				padding-left: 25px;
+				& + em {
+					left: 0;
+				}
+			}
+		}
+	}
+}

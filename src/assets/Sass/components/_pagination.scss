@@ -1,0 +1,35 @@
+div.pagination {
+	margin: 20px 0;
+	ul {
+		@extend .no-list;
+		display: flex;
+		gap: 5px;
+		justify-content: center;
+		li {
+			a {
+				@extend .flex;
+				width: 30px;
+				height: 30px;
+				color: $color-gray-400;
+				font-size: 10px;
+				background-color: $color-white;
+				border-radius: 5px;
+				em {
+					width: 15px;
+					font-size: 15px;
+					&:before {
+						width: 10px;
+						letter-spacing: 0;
+					}
+				}
+			}
+			&.active,
+			&:hover {
+				a {
+					color: $color-white;
+					background-color: $color-primary-200;
+				}
+			}
+		}
+	}
+}

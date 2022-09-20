@@ -1,0 +1,182 @@
+// Map
+.map {
+	width: 100%;
+	height: 400px;
+	.gm-style {
+		div {
+			position: static;
+		}
+	}
+}
+// For SVG stroke animation
+.dashed {
+	fill: none;
+	path {
+		@extend .trans-4;
+	}
+	&:hover {
+		path {
+			stroke-dashoffset: 0 !important;
+		}
+	}
+}
+// Socials
+.socials {
+	ul {
+		@extend .no-list;
+		display: flex;
+		li {
+			margin-right: 15px;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			a {
+				@extend .flex;
+				width: 20px;
+				height: 20px;
+				color: $color-gray-700;
+				font-size: 15px;
+				&:hover {
+					color: $color-primary-200;
+				}
+			}
+		}
+	}
+}
+// Container
+.container {
+	width: 1420px;
+	margin: 0 auto;
+	@media (max-width: 1680px) {
+		width: 1300px;
+	}
+	@media (max-width: 1440px) {
+		width: 1240px;
+	}
+	@media (max-width: 1366px) {
+		width: 1120px;
+	}
+	@media (max-width: 1280px) {
+		width: 1005px;
+	}
+	@media (max-width: 1024px) {
+		width: auto;
+		margin: 0 20px;
+	}
+}
+.form-item {
+	.input-wrap {
+		&.checker {
+			display: flex;
+			gap: 10px;
+		}
+	}
+	&.error {
+		label {
+			color: $color-error-100;
+		}
+		.input-wrap {
+			input[type='text'],
+			input[type='date'],
+			input[type='datetime'],
+			input[type='datetime-local'],
+			input[type='email'],
+			input[type='month'],
+			input[type='number'],
+			input[type='password'],
+			input[type='range'],
+			input[type='search'],
+			input[type='tel'],
+			input[type='text'],
+			input[type='time'],
+			input[type='url'],
+			input[type='week'],
+			textarea {
+				color: $color-error-100;
+				border-color: $color-error-100;
+				&::placeholder {
+					color: $color-error-100;
+				}
+				&.underline {
+					border-bottom: 1px solid $color-error-100;
+				}
+				& + em {
+					&:before {
+						color: $color-error-100;
+					}
+				}
+			}
+			.artform-wrap {
+				span {
+					border-color: $color-error-200;
+				}
+				input {
+					&[type='radio'] {
+						& + span {
+							&:before {
+								background-color: $color-error-200;
+								border-color: $color-error-200;
+							}
+						}
+						&:hover {
+							& + span {
+								border-color: $color-error-200;
+								background-color: $color-error-25;
+							}
+						}
+					}
+					&[type='checkbox'] {
+						&:hover {
+							& + span {
+								background-color: $color-error-25;
+							}
+						}
+						&:checked {
+							& + span {
+								background-color: $color-error-200;
+								border-color: transparent;
+								&:before {
+									opacity: 1;
+								}
+							}
+							&:hover {
+								& + span {
+									border-color: $color-error-200;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.error-msg {
+			display: flex;
+		}
+	}
+}
+.error-msg {
+	display: none;
+	gap: 5px;
+	margin-top: 10px;
+	em {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: var(--font-size-xs);
+		color: $color-error-100;
+		width: var(--font-size-sm);
+		height: var(--font-size-sm);
+		border-radius: var(--border-radius-half);
+		border: 1px solid $color-error-100;
+		&:before {
+			font-size: var(--font-size-xxs);
+		}
+	}
+	span {
+		font-size: var(--font-size-xs);
+		color: $color-error-100;
+		font-weight: 400;
+		line-height: 1.4;
+		align-self: center;
+	}
+}

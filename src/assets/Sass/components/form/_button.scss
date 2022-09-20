@@ -1,0 +1,66 @@
+button,
+input,
+a {
+	&.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: var(--form-height);
+		padding: 0 var(--button-padding-x);
+		font-size: var(--form-font-size);
+		text-align: center;
+		border-radius: var(--border-radius-sm);
+		cursor: pointer;
+		&.btn-primary {
+			color: $color-white;
+			background-color: $color-primary-200;
+			&:hover {
+				background-color: $color-primary-100;
+			}
+			&:disabled {
+				color: $color-gray-200;
+				background-color: $color-gray-50;
+				cursor: default;
+			}
+		}
+		&.btn-light {
+			color: $color-primary-200;
+			background-color: transparent;
+			border: var(--button-border);
+			&:hover {
+				background-color: $color-info-25;
+			}
+			&:disabled {
+				color: $color-gray-200;
+				background-color: $color-gray-50;
+				border-color: transparent;
+				cursor: default;
+			}
+		}
+		&.btn-transparent {
+			color: $color-primary-200;
+			background-color: transparent;
+			&:hover {
+				background-color: $color-info-25;
+			}
+			&:disabled {
+				color: $color-gray-200;
+				background-color: $color-gray-50;
+				border-color: $color-gray-100;
+				cursor: default;
+			}
+		}
+		&.btn-icon-left {
+			padding-left: var(--button-padding-alt);
+			em {
+				margin-right: var(--button-icon-margin);
+			}
+		}
+		&.btn-icon-right {
+			padding-right: var(--button-padding-alt);
+			em {
+				margin-left: var(--button-icon-margin);
+			}
+		}
+	}
+}

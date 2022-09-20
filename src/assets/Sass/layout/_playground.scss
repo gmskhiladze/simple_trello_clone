@@ -1,0 +1,33 @@
+.playground {
+	padding: 50px 0;
+	.container {
+		.playground-section {
+			margin-bottom: 50px;
+			padding: 50px;
+			border: 1px solid $color-gray-25;
+			border-radius: var(--border-radius-sm);
+			.section-title {
+				color: $color-primary-200;
+				font-size: var(--font-size-2xl);
+				text-align: center;
+				text-transform: uppercase;
+			}
+			.playground-sub-section {
+				margin-bottom: 50px;
+				.sub-section-title {
+					color: $color-gray-300;
+					font-weight: 400;
+					text-align: center;
+				}
+				.playground-body {
+					.playground-form-items {
+						display: grid;
+						grid-gap: 30px;
+						grid-template-columns: repeat(4, 1fr);
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+}
